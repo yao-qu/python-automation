@@ -9,3 +9,5 @@ Recently started reading books on Kindle and wanted to review the highlights mad
 `--o` output CSV filename
 
 `--e` 0 if file already exists, add new highlights to the existing file, 1 to create a new CSV file
+
+Tested on `My Clipping.txt` generated on PaperWhite 3 English version
