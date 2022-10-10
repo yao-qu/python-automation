@@ -9,7 +9,7 @@ parser.add_argument('--i', dest='TXT_LOCATION',
                     help='Kindle clippings txt file')
 parser.add_argument('--o', dest='CSV_LOCATION', help='Output file location')
 
-parser.add_argument('--e', dest='EXISTS', default=1, choices=[0, 1],
+parser.add_argument('--e', dest='EXISTS', default=1, type=int, choices=[0, 1],
                     help='0 to add highlight to existing file, 1 to create new file')
 
 
