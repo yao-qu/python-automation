@@ -17,7 +17,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     OUTPUT = "Clippings saved successfully in " + args.CSV_LOCATION
-
+    preExist = 1 if args.EXISTS == 1 else 0
     if args.EXISTS == 1:
         if os.path.exists(args.CSV_LOCATION):
             print("Cannot create a new CSV output, file already exists!")
@@ -30,6 +30,7 @@ if __name__ == "__main__":
                 writer.writerow(COLUMNS)
 
             args.EXISTS = 0
+            preExist = 0
 
     if args.EXISTS == 0 and os.path.exists(args.TXT_LOCATION) and os.path.exists(args.CSV_LOCATION):
         try:
@@ -58,4 +59,5 @@ if __name__ == "__main__":
 
     else:
         print("ERROR: check file paths")
-        os.remove(args.CSV_LOCATION)
+        if preExist == 0:
+            os.remove(args.CSV_LOCATION)
