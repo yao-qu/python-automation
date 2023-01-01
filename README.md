@@ -13,3 +13,13 @@ Recently started reading books on Kindle and wanted to review the highlights mad
 Tested on `My Clipping.txt` generated on PaperWhite 3 English version
 
 Connect Kindle to computer and copy `My Clipping.txt` from `documents` under `Kindle`
+
+
+Export Kindle Vocabulary Builder
+
+- export vocab.db from `Kindle/System/vocabulary/vocab.db`
+
+- .mode css
+- .output vocabulary.csv
+- SELECT word FROM words where lang='en'; *ommit where lang='en' if have not looked up terms in other languages*
+- .exit
